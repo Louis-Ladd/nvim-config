@@ -12,7 +12,7 @@
 local merge_tables = require("utils").merge_tables
 
 local exist, custom = pcall(require, "custom")
-local custom_formatting_servers = exist and type(custom) == "table" and custom.formatting_servers or {}
+local custom_formatting_servers = exist and type(custom) == "table" and custom.formatting_servers or { }
 local formatting_servers = {
     jsonls = {},
     dockerls = {},
@@ -20,7 +20,8 @@ local formatting_servers = {
     gopls = {},
     ruff_lsp = {},
     vimls = {},
-    yamlls = {}
+    yamlls = {},
+    clangd = {}
 }
 
 -- Merge

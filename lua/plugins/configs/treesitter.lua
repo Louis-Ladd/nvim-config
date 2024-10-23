@@ -19,7 +19,7 @@ return {
     ensure_installed = {
         "go", "python", "dockerfile", "json",
         "yaml", "markdown", "html", "scss",
-        "css", "vim", "lua", ensure_installed
+        "css", "vim", "lua", "c", "cpp", ensure_installed
     },
 
     highlight = {
