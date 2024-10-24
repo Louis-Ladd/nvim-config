@@ -93,6 +93,7 @@ local builtin_plugins = {
     {
         "williamboman/mason.nvim",
         cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUninstall", "MasonUninstallAll", "MasonLog" },
+        lazy = false,
         config = function()
             require("plugins.configs.mason")
         end
@@ -112,6 +113,7 @@ local builtin_plugins = {
     {
         "neovim/nvim-lspconfig",
         event = "User FilePost",
+        lazy = false,
         config = function()
             require("plugins.configs.lspconfig")
         end,
