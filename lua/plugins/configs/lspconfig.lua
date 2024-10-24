@@ -60,6 +60,15 @@ local function setup(server)
     local server_opts = vim.tbl_deep_extend("force", {
         capabilities = vim.deepcopy(capabilities)
     }, servers[server] or {})
+    
+    if server == "clangd" then
+        server_opts = vim.tbl_deep_extend("force", server_opts, {
+            cmd = { "clangd" },
+            filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
+            root_dir = require("lspconfig").util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+            single_file_support = true,
+        })
+    end
 
     if opts.setup[server] then
         if opts.setup[server](server, server_opts) then
