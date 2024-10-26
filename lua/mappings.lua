@@ -20,6 +20,8 @@ map("n", "<leader>wh", "<C-w>h", { desc = "switch window left" })
 map("n", "<leader>wj", "<C-w>j", { desc = "switch window right" })
 map("n", "<leader>wk", "<C-w>k", { desc = "switch window up" })
 map("n", "<leader>wl", "<C-w>l", { desc = "switch window down" })
+map("n", "<leader>ww", "<C-w>w", { desc = "switch window" })
+map("n", "<leader>ws", ":vsplit<CR>", { desc = "split window vertically" })
 
 -- Reload configuration without restart nvim
 map("n", "<leader>r", ":source $MYVIMRC<CR>", { desc = "Reload configuration without restart nvim" })
@@ -39,7 +41,7 @@ map("n", "<leader>nf", ":NvimTreeFindFile<CR>", { desc = "Search file in NvimTre
 
 -- LSP
 map("n", "<leader>gm", function()
-    require("conform").format { lsp_fallback = true }
+  require("conform").format { lsp_fallback = true }
 end, { desc = "General Format file" })
 
 -- global lsp mappings

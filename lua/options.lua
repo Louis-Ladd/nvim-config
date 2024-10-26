@@ -15,7 +15,7 @@ local opt = vim.opt
 -- Global variables
 local g = vim.g
 local s = vim.s
-local indent = 4
+local indent = 4 
 
 g.mapleader = " "
 
@@ -53,11 +53,11 @@ opt.lazyredraw = true -- don"t update the display while executing macros
 opt.list = true
 -- You can also add "space" or "eol", but I feel it"s quite annoying
 opt.listchars = {
-    tab = "┊ ",
-    trail = "·",
-    extends = "»",
-    precedes = "«",
-    nbsp = "×"
+  tab = "┊ ",
+  trail = "·",
+  extends = "»",
+  precedes = "«",
+  nbsp = "×"
 }
 
 -- Hide cmd line
@@ -80,7 +80,7 @@ opt.writebackup = false -- if a file is being edited by another program (or was 
 -- autocomplete
 opt.completeopt = { "menu", "menuone", "noselect" } -- mostly just for cmp
 opt.shortmess = opt.shortmess + {
-    c = true
+  c = true
 } -- hide all the completion messages, e.g. "-- XXX completion (YYY)", "match 1 of 2", "The only match", "Pattern not found"
 
 -- By the way, -- INSERT -- is unnecessary anymore because the mode information is displayed in the statusline.
@@ -111,14 +111,14 @@ opt.foldlevel = 99
 
 -- Disable builtin plugins
 local disabled_built_ins = {
-    "2html_plugin", "getscript", "getscriptPlugin", "gzip", "logipat", "netrw", "netrwPlugin",
-    "netrwSettings", "netrwFileHandlers", "matchit", "tar", "tarPlugin", "rrhelper",
-    "spellfile_plugin", "vimball", "vimballPlugin", "zip", "zipPlugin", "tutor", "rplugin",
-    "synmenu", "optwin", "compiler", "bugreport", "ftplugin"
+  "2html_plugin", "getscript", "getscriptPlugin", "gzip", "logipat", "netrw", "netrwPlugin",
+  "netrwSettings", "netrwFileHandlers", "matchit", "tar", "tarPlugin", "rrhelper",
+  "spellfile_plugin", "vimball", "vimballPlugin", "zip", "zipPlugin", "tutor", "rplugin",
+  "synmenu", "optwin", "compiler", "bugreport", "ftplugin"
 }
 
 for _, plugin in pairs(disabled_built_ins) do
-    g["loaded_" .. plugin] = 1
+  g["loaded_" .. plugin] = 1
 end
 
 -- Colorscheme
