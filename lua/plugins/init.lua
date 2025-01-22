@@ -20,6 +20,9 @@ local builtin_plugins = {
       formatters_by_ft = { lua = { "stylua" } },
     },
   },
+  {
+    "OmniSharp/omnisharp-vim"
+  },
   -- Git integration for buffers
   {
     "lewis6991/gitsigns.nvim",
@@ -31,7 +34,7 @@ local builtin_plugins = {
   -- Treesitter interface
   {
     "nvim-treesitter/nvim-treesitter",
-    version = false,     -- last release is way too old and doesn"t work on Windows
+    version = false, -- last release is way too old and doesn"t work on Windows
     event = { "BufReadPost", "BufNewFile" },
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
@@ -167,9 +170,9 @@ local custom_plugins = exist and type(custom) == "table" and custom.plugins or {
 -- local ok, custom_plugins = pcall(require, "plugins.custom")
 require("lazy").setup({
   spec = { builtin_plugins, custom_plugins },
-  lockfile = vim.fn.stdpath("config") .. "/lazy-lock.json",   -- lockfile generated after running update.
+  lockfile = vim.fn.stdpath("config") .. "/lazy-lock.json", -- lockfile generated after running update.
   defaults = {
-    lazy = false,                                             -- should plugins be lazy-loaded?
+    lazy = false,                                           -- should plugins be lazy-loaded?
     version = nil
     -- version = "*", -- enable this to try installing the latest stable versions of plugins
   },
@@ -208,5 +211,5 @@ require("lazy").setup({
       enabled = true
     }
   },
-  state = vim.fn.stdpath("state") .. "/lazy/state.json"   -- state info for checker and other things
+  state = vim.fn.stdpath("state") .. "/lazy/state.json" -- state info for checker and other things
 })
