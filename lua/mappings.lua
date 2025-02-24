@@ -10,9 +10,13 @@
 -- Description: Key mapping configs
 -- Author: Kien Nguyen-Tuan <kiennt2609@gmail.com>
 
+
 -- <leader> is a space now
 local map = vim.keymap.set
 map("n", "<leader>q", ":qa!<CR>", {})
+
+map("v", "<leader>y", '"+y')
+
 -- Fast saving with <leader> and s
 map("n", "<leader>s", ":w<CR>", {})
 -- Move around splits

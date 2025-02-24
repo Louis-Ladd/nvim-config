@@ -9,6 +9,6 @@ M.formatting_servers = {
 }
 
 -- add Tree-sitter to auto-install
-M.ensure_installed = { "c", "css" }
+M.ensure_installed = { "c", "css", "c_sharp" }
 
 return M

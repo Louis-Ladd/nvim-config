@@ -23,6 +23,9 @@ local builtin_plugins = {
   {
     "OmniSharp/omnisharp-vim"
   },
+  {
+    "andweeb/presence.nvim"
+  },
   -- Git integration for buffers
   {
     "lewis6991/gitsigns.nvim",
