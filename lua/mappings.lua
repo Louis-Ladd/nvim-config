@@ -17,6 +17,11 @@ map("n", "<leader>q", ":qa!<CR>", {})
 
 map("v", "<leader>y", '"+y')
 
+-- Open new terminal window
+map("n", "<leader>wt", ":terminal<CR>", { desc = "Open a terminal" })
+-- Exit terminal window without two combos
+map("t", "<C-\\>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
 -- Fast saving with <leader> and s
 map("n", "<leader>s", ":w<CR>", {})
 -- Move around splits
@@ -26,9 +31,6 @@ map("n", "<leader>wk", "<C-w>k", { desc = "switch window up" })
 map("n", "<leader>wl", "<C-w>l", { desc = "switch window down" })
 map("n", "<leader>ww", "<C-w>w", { desc = "switch window" })
 map("n", "<leader>ws", ":vsplit<CR>", { desc = "split window vertically" })
-
--- Reload configuration without restart nvim
-map("n", "<leader>r", ":source $MYVIMRC<CR>", { desc = "Reload configuration without restart nvim (prob won't work)" })
 
 -- Telescope
 local builtin = require("telescope.builtin")
