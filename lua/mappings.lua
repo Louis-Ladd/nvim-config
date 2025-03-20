@@ -43,8 +43,20 @@ map("n", "<leader>cm", builtin.git_commits, { desc = "Open Telescope to list git
 
 -- LSP
 map("n", "<leader>gm", function()
-  require("conform").format { lsp_fallback = true }
+	require("conform").format { lsp_fallback = true }
 end, { desc = "General Format file" })
+-- Show code action
+map("n", "<leader>ga", function()
+	vim.lsp.buf.code_action()
+end, { desc = "Show code action for error" })
+-- Actually apply code action
+map("n", "<leader>gf", function()
+	vim.lsp.buf.code_action(
+		{
+			filter = function(a) return a.isPreferred end,
+			apply = true
+		})
+end, { desc = "Apply preferred code action" })
 
 -- global lsp mappings
 map("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "LSP Diagnostic loclist" })

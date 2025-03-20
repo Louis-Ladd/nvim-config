@@ -26,6 +26,9 @@ local builtin_plugins = {
   {
     "andweeb/presence.nvim"
   },
+  {
+    "romainl/vim-cool"
+  },
   -- Git integration for buffers
   {
     "lewis6991/gitsigns.nvim",
