@@ -37,6 +37,9 @@ local builtin_plugins = {
       require("plugins.configs.gitsigns")
     end,
   },
+  {
+    "f-person/git-blame.nvim"
+  },
   -- Treesitter interface
   {
     "nvim-treesitter/nvim-treesitter",

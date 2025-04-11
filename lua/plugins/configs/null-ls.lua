@@ -24,6 +24,6 @@ local sources = exist
     or {}
 
 null_ls.setup({
-    debug = false,
-    sources = sources
+  debug = false,
+  sources = sources
 })
