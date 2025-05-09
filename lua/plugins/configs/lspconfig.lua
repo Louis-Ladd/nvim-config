@@ -22,6 +22,8 @@ local formatting_servers = {
   clangd = {},
   lua_ls = {},
   rust_analyzer = {},
+  eslint = {},
+  eslint_d = {}
 }
 
 local opts = {
