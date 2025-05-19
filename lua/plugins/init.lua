@@ -17,7 +17,11 @@ local builtin_plugins = {
   {
     "stevearc/conform.nvim",
     opts = {
-      formatters_by_ft = { lua = { "stylua" } },
+      formatters_by_ft = {
+        lua = { "stylua" },
+        c = { "clang_format" },
+        cpp = { "clang_format" },
+      },
     },
   },
   {
@@ -33,6 +37,11 @@ local builtin_plugins = {
     opts = function()
       require("plugins.configs.gitsigns")
     end,
+  },
+  {
+    'akinsho/git-conflict.nvim',
+    version = "*",
+    config = true
   },
   -- Treesitter interface
   {
@@ -175,7 +184,7 @@ require("lazy").setup({
   spec = { builtin_plugins, custom_plugins },
   lockfile = vim.fn.stdpath("config") .. "/lazy-lock.json", -- lockfile generated after running update.
   defaults = {
-    lazy = false,                                          -- should plugins be lazy-loaded?
+    lazy = false,                                           -- should plugins be lazy-loaded?
     version = nil
     -- version = "*", -- enable this to try installing the latest stable versions of plugins
   },
