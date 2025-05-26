@@ -13,6 +13,7 @@
 
 -- <leader> is a space now
 local map = vim.keymap.set
+
 map("n", "<leader>q", ":qa!<CR>", {})
 
 map("v", "<leader>y", '"+y')

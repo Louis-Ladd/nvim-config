@@ -34,7 +34,7 @@ opt.syntax = "enable"
 
 -- indention
 opt.autoindent = true    -- auto indentation
-opt.expandtab = true     -- convert tabs to spaces
+opt.expandtab = false    -- convert tabs to spaces
 opt.shiftwidth = indent  -- the number of spaces inserted for each indentation
 opt.smartindent = true   -- make indenting smarter
 opt.softtabstop = indent -- when hitting <BS>, pretend like a tab is removed, even if spaces
