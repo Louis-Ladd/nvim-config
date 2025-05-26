@@ -18,6 +18,7 @@ local s = vim.s
 local indent = 4
 
 vim.api.nvim_set_option("clipboard", "unnamedplus")
+vim.diagnostic.config({ virtual_text = true })
 
 g.mapleader = " "
 
