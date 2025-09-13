@@ -45,10 +45,6 @@ autocmd("BufEnter", {
   command = "set fo-=c fo-=r fo-=o"
 })
 
-autocmd("Filetype", {
-  pattern = { "xml", "html", "xhtml", "css", "scss", "javascript", "typescript", "yaml", "lua" },
-  command = "setlocal shiftwidth=2 tabstop=2"
-})
 
 -- Set colorcolumn
 autocmd("Filetype", {

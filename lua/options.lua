@@ -37,6 +37,7 @@ opt.syntax = "enable"
 opt.autoindent = true  -- auto indentation
 opt.expandtab = false  -- convert tabs to spaces
 opt.smartindent = true -- make indenting smarter
+opt.tabstop = indent   -- Set display width to 4
 
 -- search
 opt.hlsearch = true   -- highlight all matches on previous search pattern
