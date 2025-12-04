@@ -40,6 +40,7 @@ opt.smartindent = false -- make indenting smarter
 opt.tabstop = indent   -- Set display width to 4
 opt.softtabstop = indent
 opt.shiftwidth = indent
+opt.smarttab = true
 
 -- search
 opt.hlsearch = true   -- highlight all matches on previous search pattern
