@@ -23,7 +23,6 @@ local formatting_servers = {
   lua_ls = {},
   rust_analyzer = {},
   eslint = {},
-  eslint_d = {}
 }
 
 local opts = {
@@ -48,6 +47,9 @@ local opts = {
     -- end,
     -- Specify * to use this function as a fallback for any server
     -- ["*"] = function(server, opts) end,
+		asm_lsp = function ()
+			return true
+		end
   }
 }
 
