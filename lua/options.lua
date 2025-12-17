@@ -30,6 +30,7 @@ opt.backspace = { "eol", "start", "indent" } -- allow backspacing over everythin
 opt.clipboard = "unnamedplus"                -- allow neovim to access the system clipboard
 vim.opt.fileencoding = "utf-8"               -- the encoding written to a file
 opt.encoding = "utf-8"                       -- the encoding
+opt.autoread = true
 opt.matchpairs = { "(:)", "{:}", "[:]", "<:>" }
 opt.syntax = "enable"
 
