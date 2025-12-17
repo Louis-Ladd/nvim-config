@@ -173,6 +173,15 @@ local builtin_plugins = {
       require("which-key").setup()
     end,
   },
+  -- Directory Browser
+  {
+    "stevearc/oil.nvim",
+    ---@module 'oil'
+    ---@module 'oil.SetupOpts'
+    opts = {},
+    dependencies = {{"nvim-mini/mini.icons", opts = {}}},
+    lazy = false,
+  }
 }
 
 local exist, custom = pcall(require, "custom")

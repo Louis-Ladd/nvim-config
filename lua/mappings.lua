@@ -33,6 +33,9 @@ map("n", "<leader>wl", "<C-w>l", { desc = "switch window down" })
 map("n", "<leader>ww", "<C-w>w", { desc = "switch window" })
 map("n", "<leader>ws", ":vsplit<CR>", { desc = "split window vertically" })
 
+-- Oil
+map("n", "<leader>fd", "<CMD>Oil<CR>", { desc = "Open Oil directory browser"})
+
 -- Telescope
 local builtin = require("telescope.builtin")
 map("n", "<leader>ff", builtin.find_files, { desc = "Open Telescope to find files" })
