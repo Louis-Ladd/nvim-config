@@ -53,6 +53,11 @@ autocmd("Filetype", {
 })
 
 autocmd("Filetype", {
+	pattern = { "pug" },
+	command = "TSBufEnable highlight"
+})
+
+autocmd("Filetype", {
   pattern = { "gitcommit", "markdown", "text" },
   callback = function()
     vim.opt_local.wrap = true
