@@ -181,6 +181,12 @@ local builtin_plugins = {
     opts = {},
     dependencies = {{"nvim-mini/mini.icons", opts = {}}},
     lazy = false,
+  },
+  -- Indentation Guesser
+  {
+    "nmac427/guess-indent.nvim",
+    config = function()
+      require('guess-indent').setup {} end,
   }
 }
 
