@@ -104,3 +104,10 @@ require("mason-lspconfig").setup({
   ensure_installed = ensure_installed,
   automatic_installation = true
 })
+
+require("mason-lspconfig").setup_handlers({
+  -- This tells Mason: "When you set up a server, use my custom 'setup' function"
+  function(server_name)
+    setup(server_name)
+  end,
+})
